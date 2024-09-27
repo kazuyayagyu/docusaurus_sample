@@ -2,33 +2,52 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+// docusaurus.config.tsのドキュメントは下記を参照すること
+// https://docusaurus.io/docs/api/docusaurus-config
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
-
-  // Set the production url of your site here
+  // ドキュメントタイトル（必須）
+  title: 'Docusaurus Sample Site',
+  // デプロイ後のサイトURL（必須）
   url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // ホスト名の後につくpath（必須）
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  // Favicon
+  favicon: 'img/favicon.ico',
+  // URLやリンクの末尾のスラッシュの末尾（デフォルトでundefined）
+  trailingSlash: undefined,
+  // 多言語対応
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ja',
+    locales: ['ja'],
   },
-
+  // サイトや特定のページがGoogle等の検索エンジンによってインデックスされないようにする（デフォルトでfalse）
+  noIndex: true,
+  // buildした際にリンク切れを検出した際の挙動（デフォルトでthrow）
+  onBrokenLinks: 'throw',
+  // サイト内のアンカーリンクが壊れている際の挙動（デフォルトでwarn）
+  onBrokenAnchors: 'throw',
+  // Markdownリンクが壊れている際の挙動（デフォルトでwarn）
+  onBrokenMarkdownLinks: 'throw',
+  // 同じURLのページが存在する場合の挙動（デフォルトでwarn）
+  onDuplicateRoutes: 'throw',
+  // タグ
+  tagline: 'Docusaurus makes it easy to maintain Open Source documentation websites.',
+  // Githubのuserまたはorganization名。（Github Pageを使用してdeployする際に必須）
+  organizationName: 'kazuyayagyu',
+  // Githubのリポジトリ名。（Github Pageを使用してdeployする際に必須）
+  projectName: 'docusaurus_sample',
+  // デプロイするブランチ名。（Github Pageを使用してdeployする際に必須）
+  deploymentBranch: 'production',
+  // サーバーのホスト名（Github Pageを使用してdeployする際に必須）
+  githubHost: 'github.com',
+  // サーバーのポート番号（Github Pageを使用してdeployする際に必須）
+  githubPort: '22',
+  // タイトルタグの区切り文字（デフォルトで'/'）
+  titleDelimiter: '/',
+  // サイトが読み込めない場合バナーを表示するかどうか（デフォルトでtrue）
+  baseUrlIssueBanner: true,
+  
   presets: [
     [
       'classic',
@@ -62,15 +81,99 @@ const config: Config = {
     ],
   ],
 
+  // プラグイン
+  plugins: [
+
+  ],
+
+  // テーマ設定
+  themes: [],
+
+  // markdown設定
+  markdown: {
+    // Markdownに適用するparserフォーマット（デフォルトでmdx）
+    format: 'mdx',
+    // Mermaid設定（デフォルトでfalse）
+    mermaid: true,
+    // parse前にMarkdownコンテンツを文字列に変換する（デフォルトでundefined）
+    preprocessor: undefined,
+    // front matterの拡張（デフォルトでundefined）
+    parseFrontMatter: undefined,
+    // Docusaurus v3との互換性オプション（既にv3のため使用しない）
+    // mdx1Compat: {
+    //   comments: true,
+    //   admonitions: true,
+    //   headingIds: true
+    // },
+    // Markdownの見出しから生成されるアンカーの動作を制御するオプション
+    anchors: {
+      maintainCase: true,
+    },
+    // custonのremark-rehypeを使用する
+    // remarkRehypeOptions: undefined
+  },
+
+  // ナビゲーションバーやフッター等のUIのカスタマイズ設定を行う
+  // https://docusaurus.io/docs/api/themes/configuration
   themeConfig: {
-    // Replace with your project's social card
+    // カラーモードの設定
+    colorMode: {
+      // デフォルトのカラーモード（light or dark）
+      defaultMode: 'light',
+      // ナビゲーションバーのカラースイッチ
+      disableSwitch: false,
+      // ユーザー設定
+      respectPrefersColorScheme: false,
+    },
+    // Twitter Card等で表示するメタタグ画像
     image: 'img/docusaurus-social-card.jpg',
+    // HTMLメタデータ
+    metadata: [{name: 'twitter:card', content: 'summary'}],
+    // ナビゲーションバーの上にアナウンスメントバーを表示する
+    // announcementBar: {
+    //   id: 'announcement-bar',
+    //   content: 'announcement-text',
+    //   backgroundColor: '#fff',
+    //   textColor: '#000',
+    //   isCloseable: true,
+    // },
+    
+    // Docsのカスタマイズを行う
+    docs: {
+      // Docsのバージョンをブラウザ内で定義する（デフォルトでundefined）
+      versionPersistence: undefined,
+      sidebar: {
+        // サイドバーを折り畳み可能にする（デフォルトでfalse）
+        hideable: true,
+        // サイドバーのカテゴリーを複数同時に展開できる（デフォルトでfalse）
+        autoCollapseCategories: false,
+      }
+    },
+    // Blogのカスタマイズを行う
+    // blog: {
+    //   sidebar: {
+    //     // 年単位でサイドバーをグルーピングする
+    //     groupByYear: true,
+    //   }
+    // },
+
+    // ナビゲーションバーのカスタマイズを行う
     navbar: {
-      title: 'My Site',
+      // タイトル
+      title: 'Docusaurus',
+      // ロゴ
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Site Logo',
         src: 'img/logo.svg',
+        srcDark: 'img/logo_dark.svg',
+        href: 'https://docusaurus.io/',
+        target: '_self',
+        width: 32,
+        height: 32,
+        className: 'custom-navbar-logo-class',
+        style: {border: 'solid red'},
       },
+      // アイテム
       items: [
         {
           type: 'docSidebar',
@@ -78,14 +181,56 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        // {
+        //   to: '/blog',
+        //   label: 'Blog',
+        //   position: 'left'
+        // },
+        // {
+        //   type: 'docsVersionDropdown',
+        //   position: 'left',
+        //   dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+        //   dropdownActiveClassDisabled: true,
+        // },
+        {
+          type: 'dropdown',
+          label: 'Dropdown',
+          position: 'right',
+          items: [
+            {
+              label: 'Facebook',
+              href: 'https://www.facebook.com',
+            }
+          ]
+        },
+        // {
+        //   type: 'localeDropdown',
+        //   position: 'right',
+        //   dropdownItemsAfter: [
+        //     {
+        //       to: 'https://my-site.com/help-us-translate',
+        //       label: 'Help us translate',
+        //     },
+        //   ],
+        // },
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
           position: 'right',
+          target: '_blank'
         },
+        // {
+        //   type: 'search',
+        //   position: 'right',
+        // },
       ],
+      // ページ下までスクロールした際ナビゲーションバーを隠す（デフォルトでfalse）
+      hideOnScroll: true,
+      // ナビゲーションバーのスタイル（primary or dark）
+      style: 'primary'
     },
+
+    // フッターのカスタマイズを行う
     footer: {
       style: 'dark',
       links: [
@@ -131,10 +276,18 @@ const config: Config = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
+    // highlight Code Blocks theme
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    // 目次設定を行う
+    tableOfContents: {
+      // 見出しレベルの最小値（デフォルトで2）
+      minHeadingLevel: 2,
+      // 見出しレベルの最大値（デフォルトで3）
+      maxHeadingLevel: 3
+    }
   } satisfies Preset.ThemeConfig,
 };
 
