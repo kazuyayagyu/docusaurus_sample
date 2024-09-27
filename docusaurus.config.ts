@@ -165,13 +165,12 @@ const config: Config = {
       logo: {
         alt: 'Site Logo',
         src: 'img/logo.svg',
-        srcDark: 'img/logo_dark.svg',
+        srcDark: 'img/logo.svg',
         href: 'https://docusaurus.io/',
         target: '_self',
         width: 32,
         height: 32,
-        className: 'custom-navbar-logo-class',
-        style: {border: 'solid red'},
+        className: 'custom-navbar-logo-class'
       },
       // アイテム
       items: [
@@ -227,7 +226,7 @@ const config: Config = {
       // ページ下までスクロールした際ナビゲーションバーを隠す（デフォルトでfalse）
       hideOnScroll: true,
       // ナビゲーションバーのスタイル（primary or dark）
-      style: 'primary'
+      style: 'dark'
     },
 
     // フッターのカスタマイズを行う

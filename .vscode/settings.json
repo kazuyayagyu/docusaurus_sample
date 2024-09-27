@@ -1,0 +1,65 @@
+{
+  // ファイル保存時に自動でコードをフォーマット
+  "editor.formatOnSave": true,
+  // JSONスキーマの自動ダウンロードを有効にする
+  "json.schemaDownload.enable": true,
+  // エディタのタブサイズを2スペースに設定
+  "editor.tabSize": 2,
+  // ファイルの改行コードをLFに設定
+  "files.eol": "\n",
+  // HTMLファイルのデフォルトフォーマッターをPrettierに設定
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // CSSファイルのデフォルトフォーマッターをPrettierに設定
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // JavaScriptファイルのデフォルトフォーマッターをPrettierに設定
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // TypeScriptファイルのデフォルトフォーマッターをPrettierに設定
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // JavaScript ReactファイルのデフォルトフォーマッターをPrettierに設定
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // TypeScript ReactファイルのデフォルトフォーマッターをPrettierに設定
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // JSONファイルのデフォルトフォーマッターをPrettierに設定
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // MarkdownファイルのデフォルトフォーマッターをRemarkに設定
+  "[markdown]": {
+    "editor.defaultFormatter": "unifiedjs.vscode-remark"
+  },
+  // 保存時に特定のコマンドを実行する設定
+  "runOnSave.commands": [
+    {
+      // .mdxファイルを対象とするコマンドを設定
+      "match": "\\.mdx$",
+      // Remarkを使ってファイルをフォーマット
+      "command": "npm exec -- remark ${file} --output --ext .mdx --no-color",
+      // 実行中のステータスメッセージ
+      "runningStatusMessage": "🖫 Run on Save: Formatting in progress for ${fileBasename}",
+      // 実行完了時のステータスメッセージ
+      "finishStatusMessage": "🖫 Run on Save: Formatting completed for ${fileBasename}",
+      // バックグラウンド処理
+      "runIn": "backend"
+    }
+  ],
+  // Markdown All in OneのタブのスペースサイズをVSCode設定を継承するよう設定
+  "markdown.extension.list.indentationSize": "inherit",
+  // 追加設定：markdownで参照しているファイルの位置を変更したときに、markdownの参照linkも更新する
+  "markdown.updateLinksOnFileMove.enabled": "prompt",
+  // 追加設定：markdownへ画像貼り付け時にドキュメントがあるフォルダ内にimagesフォルダを作成し、自動で画像を格納できるようにする
+  "markdown.copyFiles.destination": {
+    "**/*": "${documentDirName}/images/${documentBaseName}/"
+  }
+}
