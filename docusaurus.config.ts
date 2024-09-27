@@ -1,90 +1,88 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 // docusaurus.config.tsのドキュメントは下記を参照すること
 // https://docusaurus.io/docs/api/docusaurus-config
 const config: Config = {
   // ドキュメントタイトル（必須）
-  title: 'Docusaurus Sample Site',
+  title: "Docusaurus Sample Site",
   // デプロイ後のサイトURL（必須）
-  url: 'https://your-docusaurus-site.example.com',
+  url: "https://your-docusaurus-site.example.com",
   // ホスト名の後につくpath（必須）
-  baseUrl: '/',
+  baseUrl: "/",
 
   // Favicon
-  favicon: 'img/favicon.ico',
+  favicon: "img/favicon.ico",
   // URLやリンクの末尾のスラッシュの末尾（デフォルトでundefined）
   trailingSlash: undefined,
   // 多言語対応
   i18n: {
-    defaultLocale: 'ja',
-    locales: ['ja'],
+    defaultLocale: "ja",
+    locales: ["ja"],
   },
   // サイトや特定のページがGoogle等の検索エンジンによってインデックスされないようにする（デフォルトでfalse）
   noIndex: true,
   // buildした際にリンク切れを検出した際の挙動（デフォルトでthrow）
-  onBrokenLinks: 'throw',
+  onBrokenLinks: "throw",
   // サイト内のアンカーリンクが壊れている際の挙動（デフォルトでwarn）
-  onBrokenAnchors: 'throw',
+  onBrokenAnchors: "throw",
   // Markdownリンクが壊れている際の挙動（デフォルトでwarn）
-  onBrokenMarkdownLinks: 'throw',
+  onBrokenMarkdownLinks: "throw",
   // 同じURLのページが存在する場合の挙動（デフォルトでwarn）
-  onDuplicateRoutes: 'throw',
+  onDuplicateRoutes: "throw",
   // タグ
-  tagline: 'Docusaurus makes it easy to maintain Open Source documentation websites.',
+  tagline: "Docusaurus makes it easy to maintain Open Source documentation websites.",
   // Githubのuserまたはorganization名。（Github Pageを使用してdeployする際に必須）
-  organizationName: 'kazuyayagyu',
+  organizationName: "kazuyayagyu",
   // Githubのリポジトリ名。（Github Pageを使用してdeployする際に必須）
-  projectName: 'docusaurus_sample',
+  projectName: "docusaurus_sample",
   // デプロイするブランチ名。（Github Pageを使用してdeployする際に必須）
-  deploymentBranch: 'production',
+  deploymentBranch: "production",
   // サーバーのホスト名（Github Pageを使用してdeployする際に必須）
-  githubHost: 'github.com',
+  githubHost: "github.com",
   // サーバーのポート番号（Github Pageを使用してdeployする際に必須）
-  githubPort: '22',
+  githubPort: "22",
   // タイトルタグの区切り文字（デフォルトで'/'）
-  titleDelimiter: '/',
+  titleDelimiter: "/",
   // サイトが読み込めない場合バナーを表示するかどうか（デフォルトでtrue）
   baseUrlIssueBanner: true,
-  
+
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          sidebarPath: './sidebars.ts',
+          sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
-            type: ['rss', 'atom'],
+            type: ["rss", "atom"],
             xslt: true,
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
   ],
 
   // プラグイン
-  plugins: [
-
-  ],
+  plugins: [],
 
   // テーマ設定
   themes: [],
@@ -92,7 +90,7 @@ const config: Config = {
   // markdown設定
   markdown: {
     // Markdownに適用するparserフォーマット（デフォルトでmdx）
-    format: 'mdx',
+    format: "mdx",
     // Mermaid設定（デフォルトでfalse）
     mermaid: true,
     // parse前にMarkdownコンテンツを文字列に変換する（デフォルトでundefined）
@@ -119,16 +117,16 @@ const config: Config = {
     // カラーモードの設定
     colorMode: {
       // デフォルトのカラーモード（light or dark）
-      defaultMode: 'light',
+      defaultMode: "light",
       // ナビゲーションバーのカラースイッチ
       disableSwitch: false,
       // ユーザー設定
       respectPrefersColorScheme: false,
     },
     // Twitter Card等で表示するメタタグ画像
-    image: 'img/docusaurus-social-card.jpg',
+    image: "img/docusaurus-social-card.jpg",
     // HTMLメタデータ
-    metadata: [{name: 'twitter:card', content: 'summary'}],
+    metadata: [{ name: "twitter:card", content: "summary" }],
     // ナビゲーションバーの上にアナウンスメントバーを表示する
     // announcementBar: {
     //   id: 'announcement-bar',
@@ -137,7 +135,7 @@ const config: Config = {
     //   textColor: '#000',
     //   isCloseable: true,
     // },
-    
+
     // Docsのカスタマイズを行う
     docs: {
       // Docsのバージョンをブラウザ内で定義する（デフォルトでundefined）
@@ -147,7 +145,7 @@ const config: Config = {
         hideable: true,
         // サイドバーのカテゴリーを複数同時に展開できる（デフォルトでfalse）
         autoCollapseCategories: false,
-      }
+      },
     },
     // Blogのカスタマイズを行う
     // blog: {
@@ -160,25 +158,31 @@ const config: Config = {
     // ナビゲーションバーのカスタマイズを行う
     navbar: {
       // タイトル
-      title: 'Docusaurus',
+      title: "Docusaurus",
       // ロゴ
       logo: {
-        alt: 'Site Logo',
-        src: 'img/logo.svg',
-        srcDark: 'img/logo.svg',
-        href: 'https://docusaurus.io/',
-        target: '_self',
+        alt: "Site Logo",
+        src: "img/logo.svg",
+        srcDark: "img/logo.svg",
+        href: "/",
+        target: "_self",
         width: 32,
         height: 32,
-        className: 'custom-navbar-logo-class'
+        className: "custom-navbar-logo-class",
       },
       // アイテム
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
+          type: "docSidebar",
+          sidebarId: "sampleSidebar",
+          position: "left",
+          label: "ShowCase",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "WikiSidebar",
+          position: "left",
+          label: "Wiki",
         },
         // {
         //   to: '/blog',
@@ -192,15 +196,16 @@ const config: Config = {
         //   dropdownActiveClassDisabled: true,
         // },
         {
-          type: 'dropdown',
-          label: 'Dropdown',
-          position: 'right',
+          type: "dropdown",
+          label: "Reference",
+          position: "right",
           items: [
             {
-              label: 'Facebook',
-              href: 'https://www.facebook.com',
-            }
-          ]
+              label: "Docusaurus公式サイト",
+              href: "https://docusaurus.io/",
+              target: "_blank",
+            },
+          ],
         },
         // {
         //   type: 'localeDropdown',
@@ -213,10 +218,10 @@ const config: Config = {
         //   ],
         // },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-          target: '_blank'
+          href: "https://github.com/facebook/docusaurus",
+          label: "GitHub",
+          position: "right",
+          target: "_blank",
         },
         // {
         //   type: 'search',
@@ -226,49 +231,49 @@ const config: Config = {
       // ページ下までスクロールした際ナビゲーションバーを隠す（デフォルトでfalse）
       hideOnScroll: true,
       // ナビゲーションバーのスタイル（primary or dark）
-      style: 'dark'
+      style: "dark",
     },
 
     // フッターのカスタマイズを行う
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Docs",
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: "Tutorial",
+              to: "/docs/intro",
             },
           ],
         },
         {
-          title: 'Community',
+          title: "Community",
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: "Stack Overflow",
+              href: "https://stackoverflow.com/questions/tagged/docusaurus",
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: "Discord",
+              href: "https://discordapp.com/invite/docusaurus",
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: "Twitter",
+              href: "https://twitter.com/docusaurus",
             },
           ],
         },
         {
-          title: 'More',
+          title: "More",
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: "Blog",
+              to: "/blog",
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: "GitHub",
+              href: "https://github.com/facebook/docusaurus",
             },
           ],
         },
@@ -285,8 +290,8 @@ const config: Config = {
       // 見出しレベルの最小値（デフォルトで2）
       minHeadingLevel: 2,
       // 見出しレベルの最大値（デフォルトで3）
-      maxHeadingLevel: 3
-    }
+      maxHeadingLevel: 3,
+    },
   } satisfies Preset.ThemeConfig,
 };
 
