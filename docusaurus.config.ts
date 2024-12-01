@@ -201,8 +201,13 @@ const config: Config = {
           position: "right",
           items: [
             {
-              label: "Docusaurus公式サイト",
+              label: "Docusaurus公式",
               href: "https://docusaurus.io/",
+              target: "_blank",
+            },
+            {
+              label: "Mermaid公式",
+              href: "https://mermaid.js.org/",
               target: "_blank",
             },
           ],
@@ -284,13 +289,26 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ["bash", "javascript"],
     },
+
     // 目次設定を行う
     tableOfContents: {
       // 見出しレベルの最小値（デフォルトで2）
       minHeadingLevel: 2,
       // 見出しレベルの最大値（デフォルトで3）
       maxHeadingLevel: 3,
+    },
+
+    // Mermaidの共通デザイン設定
+    mermaid: {
+      options: {
+        themeVariables: {
+          labelBoxBorderColor: "#778899",
+          noteBkgColor: "#f5f5f5",
+          noteBorderColor: "#696969",
+        },
+      },
     },
   } satisfies Preset.ThemeConfig,
 };
