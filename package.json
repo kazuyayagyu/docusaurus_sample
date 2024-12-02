@@ -12,7 +12,11 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "generate-openapi-doc": "docusaurus gen-api-docs API",
+    "clean-openapi-doc": "docusaurus clean-api-docs API",
+    "format:all-docs": "remark ./docs --output --ext .md,.mdx",
+    "format:all-codes": "prettier --write ."
   },
   "dependencies": {
     "@docusaurus/core": "3.5.2",
