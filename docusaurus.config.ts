@@ -260,7 +260,7 @@ const config: Config = {
         //   ],
         // },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/kazuyayagyu/docusaurus_sample",
           label: "GitHub",
           position: "right",
           target: "_blank",
