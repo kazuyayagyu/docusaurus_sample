@@ -45,11 +45,11 @@ export function insertDetailComponentApiMdGenerator({
     `import SchemaTabs from "@theme/SchemaTabs";\n`,
     `import Heading from "@theme/Heading";\n`,
     `import OperationTabs from "@theme/OperationTabs";\n`,
-    `import TabItem from "@theme/TabItem";\n`,
-    `import Detail from "/docs/Backend/details/${path.replace("/api/v1/", "")}.mdx";\n\n`, // /docs/Backend/detailsの各APIファイルをインポート
+    `import TabItem from "@theme/TabItem";\n\n`,
+    //    `import Detail from "/docs/Backend/details/${path.replace("/api/v1/", "")}.mdx";\n\n`, // /docs/Backend/detailsの各APIファイルをインポート
     createHeading(title),
     createMethodEndpoint(method, path),
-    `<Detail />\n\n`, //コンポーネントを配置
+    //    `<Detail />\n\n`, //コンポーネントを配置
     infoPath && createAuthorization(infoPath),
     frontMatter.show_extensions ? createVendorExtensions(extensions) : undefined,
     createDeprecationNotice({ deprecated, description: deprecatedDescription }),
