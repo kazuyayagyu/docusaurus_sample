@@ -218,7 +218,7 @@ const config: Config = {
         },
         {
           to: "/api",
-          label: "API一覧",
+          label: "APIs",
           position: "left",
         },
         // {
