@@ -284,8 +284,12 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: "Showcase",
+              to: "/docs/Sample/",
+            },
+            {
+              label: "Wiki",
+              to: "/docs/Wiki",
             },
           ],
         },
@@ -309,10 +313,6 @@ const config: Config = {
         {
           title: "More",
           items: [
-            {
-              label: "Blog",
-              to: "/blog",
-            },
             {
               label: "GitHub",
               href: "https://github.com/facebook/docusaurus",

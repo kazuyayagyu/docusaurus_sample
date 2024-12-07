@@ -15,16 +15,11 @@ const sidebar: SidebarsConfig = {
     {
       type: "doc",
       id: "Sample/index",
-      label: "Showcase",
-    },
-    {
-      type: "doc",
-      id: "Sample/markdown",
-      label: "Markdown",
+      label: "はじめに",
     },
     {
       type: "category",
-      label: "Mermaid",
+      label: "Mermaid例",
       collapsed: false,
       items: [
         {
