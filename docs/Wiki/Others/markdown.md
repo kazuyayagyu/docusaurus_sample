@@ -36,6 +36,8 @@ MDXとは、MarkdownにJSXを組み込むことで、Reactコンポーネント�
 - ボタンやカードなどのReactコンポーネントを埋め込む
 - 動的な要素をMarkdown内で実現する
 
+TODO:: 参考で分かるものを挿入
+
 詳しくは[公式ドキュメント](https://docusaurus.io/docs/markdown-features/react)をご覧ください。
 
 #### Front matterについて

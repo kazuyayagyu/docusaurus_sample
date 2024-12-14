@@ -59,11 +59,6 @@ const sidebar: SidebarsConfig = {
           id: "Wiki/Advanced/lint",
           label: "Lint設定",
         },
-        {
-          type: "doc",
-          id: "Wiki/Advanced/openapi",
-          label: "OpenApiファイルの自動生成",
-        },
       ],
     },
     {
