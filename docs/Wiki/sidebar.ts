@@ -56,8 +56,8 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "Wiki/Advanced/lint",
-          label: "Lint設定",
+          id: "Wiki/Advanced/formatter",
+          label: "フォーマッター設定",
         },
       ],
     },
