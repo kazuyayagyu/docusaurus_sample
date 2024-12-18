@@ -1,0 +1,28 @@
+// VSCodeの推奨拡張機能
+// 拡張機能タブを開き、`@recommended`と入力すると下記で定義されている拡張機能の一覧が検索できます。
+{
+  "recommendations": [
+    // 【Markdown All in One】Markdownを効率的に編集するための機能を提供する
+    "yzhang.markdown-all-in-one",
+    // 【Markdown Table to Formatter】Markdownの表を簡単に作成・フォーマットするためのツール
+    "TakumiI.markdowntable",
+    // 【Markdown Preview Mermaid Support】Mermaid.jsを用いてMarkdown内に図を描写する
+    "bierner.markdown-mermaid",
+    // 【Markdown Preview Github Styles】GithubスタイルのMarkdownプレビューを提供する
+    "bierner.markdown-preview-github-styles",
+    // 【Markdown PDF】MarkdownファイルをPDF形式としてエクスポート
+    "yzane.markdown-pdf",
+    // 【Redocly OpenAPI】OpenAPI仕様書を編集、プレビュー
+    "Redocly.openapi-vs-code",
+    // 【MDX】MDXファイルのサポートを提供する
+    "unifiedjs.vscode-mdx",
+    // 【Run on Save】ファイル保存時に指定したスクリプトやコマンドを実行
+    "pucelle.run-on-save",
+    // 【Remark】Markdown用の静的解析ツールであるRemarkのサポート
+    "unifiedjs.vscode-remark",
+    // 【Prettier】コードフォーマッター
+    "esbenp.prettier-vscode",
+    // 【ESLint】JavaScriptおよびTypeScriptの静的解析ツール
+    "dbaeumer.vscode-eslint"
+  ]
+}

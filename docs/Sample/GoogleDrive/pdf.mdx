@@ -1,0 +1,19 @@
+import MinutesViewer from '@site/src/components/minutesViewer';
+
+# PDFファイルの埋め込み
+
+GoogleDriveにアップしてあるPDFファイルを埋め込むことができます。\
+そのまま埋め込むこともできますが、DocusaurusはReactベースのため、下記のような形式にすることも可能です。
+
+📁ファイル格納先: [https://drive.google.com/drive/u/0/folders/1GvF0DGvpw9HsHdT7iu4QDpHmuCjuQiK6](https://drive.google.com/drive/u/0/folders/1GvF0DGvpw9HsHdT7iu4QDpHmuCjuQiK6)
+
+---
+
+<MinutesViewer
+  files={[
+  {id: '1DRJVjrFhyB0UxI6_2qtUYTR9ybrsrMNP', name: '202401'},
+  {id: '1yM42ayQGDG9bNVtuvcisHYXRh9P7_KNP', name: '202402'},
+  {id: '1O8MYXOtLwUlN_2NTv7psECYW-SzTDmn1', name: '202403'},
+  {id: '15VTgZUQoMHOWl8qiwh8RiNCCg3x8Yf_n', name: '202404'},
+]}
+/>

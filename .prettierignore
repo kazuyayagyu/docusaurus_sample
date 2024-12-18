@@ -1,0 +1,6 @@
+# MarkdownファイルのフォーマッターはPrettierではなくRemarkを使用するため無効にする
+*.md
+*.mdx
+
+open-api.yaml
+package-lock.json
