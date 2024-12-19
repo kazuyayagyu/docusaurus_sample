@@ -11,14 +11,14 @@ const config: Config = {
   // ドキュメントタイトル（必須）
   title: "Docusaurus Sample Site",
   // デプロイ後のサイトURL（必須）
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://docusaurus_sample.github.io",
   // ホスト名の後につくpath（必須）
   baseUrl: "/",
 
   // Favicon
   favicon: "img/favicon.ico",
   // URLやリンクの末尾のスラッシュの末尾（デフォルトでundefined）
-  trailingSlash: undefined,
+  trailingSlash: false,
   // 多言語対応
   i18n: {
     defaultLocale: "ja",
@@ -62,7 +62,7 @@ const config: Config = {
           //サイドバーのパス
           sidebarPath: "./sidebars.ts",
           // ページの左下に「このページを編集」の遷移先URL
-          editUrl: "https://github.com/kazuyayagyu/docusaurus_sample/edit/main/",
+          editUrl: "https://github.com/kazuyayagyu/docusaurus_sample/edit/develop/",
           // ページ右下に最後に更新した人の名前を表示する
           showLastUpdateAuthor: true,
           // ページ右下に最後に更新された日時を表示する
