@@ -41,7 +41,7 @@ const config: Config = {
   // Githubのリポジトリ名。（Github Pageを使用してdeployする際に必須）
   projectName: "docusaurus_sample",
   // デプロイするブランチ名。（Github Pageを使用してdeployする際に必須）
-  deploymentBranch: "production",
+  deploymentBranch: "gh-pages",
   // サーバーのホスト名（Github Pageを使用してdeployする際に必須）
   githubHost: "github.com",
   // サーバーのポート番号（Github Pageを使用してdeployする際に必須）
