@@ -1,0 +1,2 @@
+# プロジェクトのルートディレクトリで実行
+touch build/.nojekyll
